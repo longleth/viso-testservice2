@@ -1,0 +1,1 @@
+Sample upstream service protected by oauth2service, intercepts any request from other upstream services with verified access tokens, using WebClient provided by OAuth2 Client to retrieve protected data from testservice1
