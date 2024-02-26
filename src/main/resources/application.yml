@@ -1,0 +1,19 @@
+
+### ClientRegistration configuration to access protected APIs resources
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          outbound-oauth2-client:
+            provider: viso-oauth2service
+            client-id: test_client
+            client-secret: test_secret
+            authorization-grant-type: client_credentials
+            redirect-uri: "http://127.0.0.1:8904/authorized"
+            scope: test.read, test.write
+        provider:
+          viso-oauth2service:
+            issuer-uri: http://localhost:8901
+            token-uri: http://127.0.0.1:8901/api/v1/oauth2/token
+#authorization_code
